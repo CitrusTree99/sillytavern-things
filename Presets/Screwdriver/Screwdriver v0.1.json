@@ -1,0 +1,1512 @@
+{
+    "extensions": {
+        "regex_scripts": []
+    },
+    "temperature": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "top_a": 1,
+    "min_p": 0,
+    "repetition_penalty": 1,
+    "max_context_unlocked": false,
+    "openai_max_context": 100000,
+    "openai_max_tokens": 8192,
+    "names_behavior": 0,
+    "send_if_empty": "",
+    "impersonation_prompt": "[Write your next reply from the point of view of {{user}}, using the chat history so far as a guideline for the writing style of {{user}}. Don't write as {{char}} or system. Don't describe actions of {{char}}.]",
+    "new_chat_prompt": "[Start a new Chat]",
+    "new_group_chat_prompt": "[Start a new group chat. Group members: {{group}}]",
+    "new_example_chat_prompt": "[Example Chat]",
+    "continue_nudge_prompt": "[Continue your last message without repeating its original content.]",
+    "bias_preset_selected": "Default (none)",
+    "wi_format": "{0}",
+    "scenario_format": "{{scenario}}",
+    "personality_format": "{{personality}}",
+    "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
+    "stream_openai": true,
+    "prompts": [
+        {
+            "name": "⌈ Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for card override. }}{{trim}}",
+            "identifier": "main",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "name": "| NSFW Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for card override. }}{{trim}}",
+            "identifier": "nsfw",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "dialogueExamples",
+            "name": "Chat Examples",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "⌊ Jailbreak Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for card override. }}{{trim}}",
+            "identifier": "jailbreak",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "chatHistory",
+            "name": "Chat History",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoAfter",
+            "name": "| | World Info (After)",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "worldInfoBefore",
+            "name": "| | World Info (Before)",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "enhanceDefinitions",
+            "role": "system",
+            "name": "| Enhance Definitions",
+            "content": "{{// Empty for card override. }}{{trim}}",
+            "system_prompt": true,
+            "marker": false,
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "charDescription",
+            "name": "| | Char Description",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "charPersonality",
+            "name": "| | Char Personality",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "scenario",
+            "name": "| | Scenario",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "personaDescription",
+            "name": "| | User Persona",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "cd03fd4b-a5be-4db7-a504-eb86bc8a9170",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "📢 | README | 📢",
+            "role": "system",
+            "content": "{{// \n\n━━━━━ CITRUS' PERSONAL PRESET ━━━━━\n            Secret Unreleased Edition\n\nCongratulations you can read READMEs!\n\n }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "08b747a7-2c14-4a42-857d-bf4343324330",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Optional Genres ━━━━━",
+            "role": "system",
+            "content": "{{// Optional genre prompts. You can enable as many as you want but I recommend going for two at most and not picking contradictory ones. }}{{trim}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "9ab09a4f-8355-4d3d-9421-cfc8765b1f2e",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Role ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what you want the role of your model to be. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b30955c7-ad88-47c4-a3dd-13532e61b86d",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Tense ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what tense to use for narration. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "05f41305-7a05-4c44-96d9-a2a8c358c53f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Narration ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what person to use for narration. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "0cb33747-5356-4369-8032-c2f716a9f945",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ POV ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what Point of View to use for narration. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "06c62474-a1c7-4c11-a467-21e7f6a5efb4",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Length ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what output length to use for narration. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "a9f9b691-1916-4b0b-9467-865c330ae8f6",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Content Guidelines ━━━━━",
+            "role": "system",
+            "content": "{{// Choose what SFW/NSFW guidelines to use for narration. PICK ONE ONLY. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "669ba0d0-8f41-4e3f-a0b2-65759319fe6f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "0.0 ┃ Narrator",
+            "role": "system",
+            "content": "{{setvar::role::an excellent game master. Your goal is to drive this continuous and immersive roleplay experience as the narrator and any relevant characters. You will be replying to the user who plays the protagonist {{user}}}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "3403fba6-e9e9-4780-8584-1562ef5ea940",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "0.1 | Character",
+            "role": "system",
+            "content": "{{setvar::role:: an excellent roleplayer. Your goal is to play as {{char}} in this, continuous, and immersive roleplay experience. You will be replying to the user who plays the protagonist {{user}}}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b5e9f30a-3a91-4eb8-a8a0-3cdbe06e8a7c",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "1.0 ┃ Past",
+            "role": "system",
+            "content": "{{setvar::tense::past tense}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "977a63e2-cabe-4031-a905-49b571476dce",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "1.1 | Present",
+            "role": "system",
+            "content": "{{setvar::tense::present tense}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "1a79b3cf-e283-4a34-b8f3-e179fd5cf323",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "1.2 | Future",
+            "role": "system",
+            "content": "{{setvar::tense::future tense}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "ef56477d-bdd3-48d1-97e8-efbc33c541b0",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "2.0 | First-Person",
+            "role": "system",
+            "content": "{{setvar::narration::first-person}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "fb36cb51-4dc6-46d9-ad26-25108ac43896",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "2.1 | Second-Person",
+            "role": "system",
+            "content": "{{setvar::narration::second-person}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "3af13429-125a-42f9-b9ba-8ab048746e1f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "2.2 | Third-Person",
+            "role": "system",
+            "content": "{{setvar::narration::third-person}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "44c66ca8-1080-450c-819c-32cbb3ab4570",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "3.0 | Omniscient",
+            "role": "system",
+            "content": "{{setvar::perspective::omniscient narration}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d519e9e6-23f3-447a-9380-262899a1721a",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "3.1 | Character",
+            "role": "system",
+            "content": "{{setvar::perspective::limited narration from {{char}}'s perspective}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "700bccf2-5174-419b-87b7-2659936ff87a",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "3.2 | User",
+            "role": "system",
+            "content": "{{setvar::perspective::limited narration from {{user}}'s perspective}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "2048ac07-1f7d-4a02-a256-a2deac180821",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "4.0 | Dynamic",
+            "role": "system",
+            "content": "{{setvar::length::DYNAMIC}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "2d56886b-6d29-4c5a-bd45-0fa8bc40a598",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "4.1 | Very Short",
+            "role": "system",
+            "content": "{{setvar::length::under 60 words}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "ee79f58d-e1ca-4a2c-8373-4102ff34950f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "4.2 | Short",
+            "role": "system",
+            "content": "{{setvar::length::between 60-150 words}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "4533ea3d-1ea4-4921-86f1-74fb6409e92c",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "4.3 | Medium",
+            "role": "system",
+            "content": "{{setvar::length::between 150-300 words}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "fccb4290-8af4-4db3-af17-5955a46bc1bc",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "4.4 | Long",
+            "role": "system",
+            "content": "{{setvar::length::above 300 words}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "e88feddf-3276-411b-8761-d65d3ae55b62",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "5.0 | PG-13",
+            "role": "system",
+            "content": "{{setvar::guidelines::This is a PG-13 work of fiction intended for a general audience. Mild profanity and serious themes may be present, but content must remain suitable for standard broadcast television. Employ \"fade-to-black\" mechanics for any sexual situations; detailed anatomical descriptions and visceral bodily sensations are forbidden. Avoid gratuitous gore, realistic torture, or detailed descriptions of internal injury and bodily fluids, focus instead on conflict and stylized horror, and violence rather than realism. Absolutely no sexual scenes or extreme content. Dark themes are permitted but must rely on psychological pressure and mood rather than shock value or graphic depiction of suffering.}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "92e8960d-c69d-416c-89c9-9a539b53abbc",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "5.1 | SFW",
+            "role": "system",
+            "content": "{{setvar::guidelines::This SFW work of fiction is intended for mature audiences. Profanities and dark themes can be present. Before a sex scene, cut to black and progress to the aftermath. Do not directly show any sexual interactions, but implications are allowed. When portraying violence, describe it realistically.}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d364c66a-83ea-4ef1-9b1a-038b57a51322",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "5.2 | NSFW (Softcore)",
+            "role": "system",
+            "content": "{{setvar::guidelines::Almost anything goes in this NSFW work of fiction intended for adult audiences. Profanities and dark themes will be present. Every character, {{user}} included, can be harmed or killed. During sexual scenes, use explicit physical detail, anatomical accuracy, and moment-to-moment description of actions, sensations, and reactions. Focus on clarity, pacing, and immersion. Violence can be fully graphic and extreme without limitation. Sexual content requires mutual consent, stated or implied, from all adult characters involved, {{user}} included. Children cannot and must not consent to sexual acts.}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "aac2a203-65f2-4430-b510-226598c4a974",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "5.3 | NSFW (Hardcore)",
+            "role": "system",
+            "content": "{{setvar::guidelines::Anything goes in this NSFW work of fiction intended for adult audiences. Profanities, toxicity and dark themes will be present. Every character, {{user}} included, can be harmed, killed, raped or used. To maintain the integrity of the story, characters may be as kind or as cruel as necessary, including performing emotionally/physically devastating actions for their own gain or pleasure. During sexual scenes use explicit physical detail, anatomical accuracy, and description of actions, sensations, and verbal and physical reactions. Violence must be fully graphic and realistic with no limitations. No holding back.}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "2390217c-0de1-4c5c-872b-31f96cfd48df",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.0 | 💘 Romance",
+            "role": "system",
+            "content": "{{setvar::romance::<romance>\nSlow-burn romantic tone. Focus on realistic connections, love and intimacy between characters. Love must be earned and emotional stakes are high, with characters' internal barriers (trauma, self-worth, fears, assumptions, emotions) and external barriers (society, family) influencing their actions and the storytelling.\n\nExample Media: Slow Burn Fanfiction, Jane Austen Novels, Call Me By Your Name\n</romance>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "7c9f7959-564f-46c2-b157-3e2a62e7a1eb",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.1 | 🧸 Wholesome",
+            "role": "system",
+            "content": "{{setvar::wholesome::\n<wholesome>\nWholesome and heartwarming tone. Focus on fluff, warmth, happiness and joy with no angst. Show acts of compassion, kindness and emotional warmth with minimal or easily resolved conflict.\n\nExample Media: Animal Crossing, Bluey, Fluff Fanfiction\n</wholesome>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "c2759986-9e87-4707-aa9e-77d6e7bdb5a2",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.2 | 😂 Comedy",
+            "role": "system",
+            "content": "{{setvar::comedy::\n<comedy>\nComedic tone. Focus on humorous dialogue, slapstick, absurdism and over the top reactions and situations. Banter and witty and fun dialogue, serious or deadpan characters in ridiculous situations, sitcom-style situations and escalation, and punchlines.\n\nExample Media: Airplane!, Always Sunny in Philadelphia, Seinfeld.\n</comedy>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "e5f970ff-7ade-4812-bedf-562e6edd3c49",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.3 | ❤️‍🩹 Healing & Comfort",
+            "role": "system",
+            "content": "{{setvar::healing::<healing>\n\nExample Media: \n</healing>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "cc4ae954-4fda-4db1-adec-47af5b59954d",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.4 | 🥲 Bittersweet",
+            "role": "system",
+            "content": "{{setvar::bittersweet::<bittersweet>\n\nExample Media:\n</bittersweet>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "6a28bed4-577a-4946-85e8-6539800868c5",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.5 | 😱 Drama",
+            "role": "system",
+            "content": "{{setvar::drama::<drama>\n\nExample Media:\n</drama>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "a8305ed3-ffe7-4ee2-a3c9-54a642c4b536",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.6 | 👻 Horror",
+            "role": "system",
+            "content": "{{setvar::horror::<horror>\n\nExample Media: \n</horror>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "187d786c-9842-4d72-a9d2-44c34671d264",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.7 | 💀 Dead Dove",
+            "role": "system",
+            "content": "{{setvar::deaddove::<deaddove>\n\nExample Media:\n</deaddove>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "e76e4b48-775e-4046-b3e7-bb296338f50a",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "6.8 | 🍆 Smut",
+            "role": "system",
+            "content": "{{setvar::smut::<smut>\n\nExample Media:\n</smut>}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "3d48df10-c494-4372-9db1-bd01da0d2857",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Context Prompts ━━━━━",
+            "role": "system",
+            "content": "{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "3edf002d-21d8-4d29-a02a-629c2726c48d",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⚲ Last Message",
+            "role": "system",
+            "content": "{{lastMessage}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "213c425a-68a8-4c9e-a191-b2ffe47b0e72",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "Main",
+            "role": "system",
+            "content": "You are {{getvar::role}}.\nMaintain an adaptive and immersive tone for creative writing.",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d46ec6c1-71bc-4332-8996-61c8d1101366",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "✎ Rules",
+            "role": "system",
+            "content": "Here are some important rules you must always follow:\n<rules>\n1. Portray a living world full of authentic characters who are multidimensional, dynamic, and autonomous. Never reduce them to one-note caricatures. They should have the capacity to be good, evil, and everything in between; true to their complex personalities, with contradictions, hypocrisies, and opinions. Uphold their realistic spatial, emotional, and situational awareness. They shouldn't know other people's thoughts or omniscient knowledge they wouldn't reasonably have access to.\n2. Proactively progress the plot from where the last message left off, with a coherent and smooth story flow. Introduce new dialogues, challenges, dangers, conflicts, twists, or events at every opportunity.\n3. Judge the user's attempted actions with success or failure, keeping outcomes challenging but fair and applying long-lasting consequences of their decisions. The user is not a Mary Sue and shouldn't be treated as such, but they also shouldn't be dragged through the mud; find a logical balance.\n4. Never narrate {{user}}'s actions or write their dialogues; finish if it's their turn to act or speak. If necessary for smooth progression, recount what {{user}} did or said with indirect speech, e.g., \"you asked for directions\". The only exception allowing you to play as {{user}} is with the user's explicit permission.\n5. {{getvar::guidelines}}\n</rules>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d532155e-876e-4cda-b08f-99c5b9c7cc32",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Optional Modules ━━━━━",
+            "role": "system",
+            "content": "{{// Entirely optional module presets that add some extra functionality. Experimental. }}{{trim}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "9cc4fc6a-cc89-4141-bb10-ccb5af92c7ff",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "❤️ | Realistic Intimacy",
+            "role": "system",
+            "content": "{{setvar::realintimacy::<module name=\"Realistic Intimacy\">\nWrite realistic, accurate and human sex scenes and intimacy. Account for physical logistics, some positions can be uncomfortable, shifting of weight may be necessary and characters involved may get tired. It's important that character psychology remains unchanged, arousal does not replace a character's personality and concerns but may influence them. Skill mismatch creates interesting narrative frictions, the sexual experience of a character will manifest in the skillfulness of their actions. Consequences exist and must be acknowledged or intentionally bypassed or ignored: Sexual safety, pregnancies, sexually transmitted diseases, etc. Imperfection makes sex beautiful and realistic.\n</module>}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "2d98436c-5f74-49fa-900f-88fadc69a6c3",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "🎨 | HTML Formatting (Simple)",
+            "role": "system",
+            "content": "{{setvar::htmlformat::<module name=\"HTML Formatting\">\nUse simple HTML/CSS when relevant to incorporate visuals from the characters's perspectives into the written narrative. Apply formatting to enhance scenes and interactions: technology/digital device (Terminals, notification, calls, projections, etc.) and in-world objects (papers, scrolls, labels, etc.). \n\nColor clarity is critical, ensure good contrast between text and background. Styling must match the world and setting. Simplicity is king, ensure not to go overboard.\n</module>}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "57ae9f34-b636-4614-918b-0255317de181",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "━━━━━ Output Prompts ━━━━━",
+            "role": "system",
+            "content": "{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "74483327-1c05-4398-b225-684c1961c737",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌈ Responding",
+            "role": "system",
+            "content": "{{// This comment WAS an Easter Egg. I have taken it as my own, tho. You can't have it. }}{{trim}}\n\nHow do you respond?",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "f9c33035-52e4-49af-aeda-34475bfda9e8",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| Thinking",
+            "role": "system",
+            "content": "{{// Encourages thinking. }}{{trim}}\n\nThink before you continue.",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "a1005fc3-8995-4145-8650-fb6e79512537",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌊ Formatting",
+            "role": "system",
+            "content": "{{// Response formatting, variables get replaced with the values from toggles. }}{{trim}}\n\nWrite in a professional style in {{getvar::tense}} {{getvar::narration}} {{getvar::perspective}}. Break patterns from your previous responses by varying sentence structures, rhythms, formats, and openings. Actively track when a sentence shape, cadence, sensory detail, or a descriptor appeared recently, and replace it with a different one or skip it entirely. If you mentioned something once, that's enough. Unconventional similes, and subverted turns of phrase are encouraged. Match the ratio of dialogue to narration based on the situation: if {{user}} is talking, focus on dialogue; if {{user}} is acting, focus on description.\n\nAvoid purple prose, and anaphoras, especially the negatives with \"no/not/wasn't/didn't\". Minimize asterisks, ellipses, and em-dashes. \n\nYou must keep your response length {{getvar::length}}. Continue directly from the final line of the last message in the conversation with new, original content only. No plot armor. Don't play for {{user}}. Never end on handover cues; finish naturally.\n\nCRITICAL: Do not repeat, echo, parrot, or restate distinctive words, phrases, and dialogues from the user's last message. If reacting to speech, show interpretation or response, not repetition.\nEXAMPLE: \"Are you a weirdo?\" User asks.\nBAD: \"Weirdo?\"\nGOOD: A flat look. \"What type of question is that?\"",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "19a7bdcf-febb-40cb-8afe-3c1c51a9bb8c",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌈ <setting>",
+            "role": "system",
+            "content": "<setting>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "09aa8242-564a-4c11-870e-eec73bd7f81f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌊</setting>",
+            "role": "system",
+            "content": "</setting>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d2d81d9c-5886-4472-a394-467d73b2e388",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌈ <characters>",
+            "role": "system",
+            "content": "<characters names=\"{{group}}\" player=\"you\">",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "910a3a15-9f9e-4fa0-b7fa-423fb94d12b9",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌊ </characters>",
+            "role": "system",
+            "content": "</characters>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "4bb6be75-6933-44ec-8036-06a9a5fd9bc8",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌈ <protagonist>",
+            "role": "system",
+            "content": "<protagonist name=\"{{user}}\" player=\"user\">",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "46fe1e99-fa1b-4832-80be-837a9e0b58e7",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "",
+            "role": "system",
+            "content": "</protagonist>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "f9f55b5a-f927-4183-82af-dfb095b6f3ad",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌊ </protagonist>",
+            "role": "system",
+            "content": "</protagonist>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "1c643d43-72e0-4f9b-89cf-92defc9e1d4b",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌈ <scenario>",
+            "role": "system",
+            "content": "<scenario>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "08062b83-017b-4492-892a-3396e065264d",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "| ⌊ </scenario>",
+            "role": "system",
+            "content": "</scenario>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d2454d25-8030-4d49-8697-d077d26aa77f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌈ <lore>",
+            "role": "system",
+            "content": "Here is the lore for the interaction you should reference, alongside your own knowledge. If a field is empty, it means it wasn't provided:\n<lore>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "8b0722a3-09d5-45ae-84f0-9a7f3cdb20ca",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌊ </lore>",
+            "role": "system",
+            "content": "</lore>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b67617a9-3404-4f72-a913-0fc512a23c0c",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌈ <example>",
+            "role": "system",
+            "content": "<example>\nHere is an example of how to respond, outside the conversation context. It can be empty if found unnecessary:\n<example>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "aea46bcf-1867-4ad3-b95c-ba526080e7fc",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌊ </example>",
+            "role": "system",
+            "content": "</example>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "c2b9a4a1-a053-47d0-9de5-fc2429b5b9e7",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<history> ",
+            "role": "system",
+            "content": "Here is the conversation history (between the user and you):\n<history>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b4ccdabf-3d68-4072-babc-c8f9d7644ec4",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</history>",
+            "role": "system",
+            "content": "</history>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "4bed62b4-6135-4460-a8ed-89c9bbc99d0f",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<message>",
+            "role": "system",
+            "content": "Here is the last message in the conversation:\n<message>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "7f46a7d3-fa96-40f8-9c64-8d1b7d1b9190",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</message>",
+            "role": "system",
+            "content": "</message>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "25a724a1-71eb-4e43-8a66-69b3c80cb7c0",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⬇︎⬇︎ ⚠️ MANDATORY ⚠️ ⬇︎⬇︎",
+            "role": "system",
+            "content": "{{// I you disable any of the prompts below this point and the preset stops working it's your fault and I will hunt you down if you complain. \n\nAll prompts below are actually sent to the model directly, unlike the ones above.}}{{trim}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "36938d3b-a719-46c5-ad95-2e2e2a9c6df0",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌈ Genres",
+            "role": "system",
+            "content": "Here are the currently active Genres, incorporate these tones and themes while writing. If the field is empty, it means none are active:\n<genres>\n{{getvar::romance}}\n{{getvar::wholesome}}\n{{getvar::comedy}}\n{{getvar::healing}}\n{{getvar::bittersweet}}\n{{getvar::drama}}\n{{getvar::horror}}\n{{getvar::deaddove}}\n{{getvar::smut}}\n\n</genres>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "77f761f8-7966-4867-b0c9-98b5df191e69",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "⌊ Modules",
+            "role": "system",
+            "content": "Here are the currently active Modules, incorporate these orders while writing. If the field is empty, it means none are active:\n<modules>\n{{getvar::realintimacy}}{{trim}}\n{{getvar::htmlformat}}{{trim}}\n\n</modules>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        }
+    ],
+    "prompt_order": [
+        {
+            "character_id": 100000,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": false
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "character_id": 100001,
+            "order": [
+                {
+                    "identifier": "cd03fd4b-a5be-4db7-a504-eb86bc8a9170",
+                    "enabled": false
+                },
+                {
+                    "identifier": "9ab09a4f-8355-4d3d-9421-cfc8765b1f2e",
+                    "enabled": true
+                },
+                {
+                    "identifier": "669ba0d0-8f41-4e3f-a0b2-65759319fe6f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "3403fba6-e9e9-4780-8584-1562ef5ea940",
+                    "enabled": false
+                },
+                {
+                    "identifier": "b30955c7-ad88-47c4-a3dd-13532e61b86d",
+                    "enabled": true
+                },
+                {
+                    "identifier": "b5e9f30a-3a91-4eb8-a8a0-3cdbe06e8a7c",
+                    "enabled": true
+                },
+                {
+                    "identifier": "977a63e2-cabe-4031-a905-49b571476dce",
+                    "enabled": false
+                },
+                {
+                    "identifier": "1a79b3cf-e283-4a34-b8f3-e179fd5cf323",
+                    "enabled": false
+                },
+                {
+                    "identifier": "05f41305-7a05-4c44-96d9-a2a8c358c53f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "ef56477d-bdd3-48d1-97e8-efbc33c541b0",
+                    "enabled": false
+                },
+                {
+                    "identifier": "fb36cb51-4dc6-46d9-ad26-25108ac43896",
+                    "enabled": true
+                },
+                {
+                    "identifier": "3af13429-125a-42f9-b9ba-8ab048746e1f",
+                    "enabled": false
+                },
+                {
+                    "identifier": "0cb33747-5356-4369-8032-c2f716a9f945",
+                    "enabled": true
+                },
+                {
+                    "identifier": "44c66ca8-1080-450c-819c-32cbb3ab4570",
+                    "enabled": true
+                },
+                {
+                    "identifier": "d519e9e6-23f3-447a-9380-262899a1721a",
+                    "enabled": false
+                },
+                {
+                    "identifier": "700bccf2-5174-419b-87b7-2659936ff87a",
+                    "enabled": false
+                },
+                {
+                    "identifier": "06c62474-a1c7-4c11-a467-21e7f6a5efb4",
+                    "enabled": true
+                },
+                {
+                    "identifier": "2048ac07-1f7d-4a02-a256-a2deac180821",
+                    "enabled": false
+                },
+                {
+                    "identifier": "2d56886b-6d29-4c5a-bd45-0fa8bc40a598",
+                    "enabled": false
+                },
+                {
+                    "identifier": "ee79f58d-e1ca-4a2c-8373-4102ff34950f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "4533ea3d-1ea4-4921-86f1-74fb6409e92c",
+                    "enabled": false
+                },
+                {
+                    "identifier": "fccb4290-8af4-4db3-af17-5955a46bc1bc",
+                    "enabled": false
+                },
+                {
+                    "identifier": "a9f9b691-1916-4b0b-9467-865c330ae8f6",
+                    "enabled": true
+                },
+                {
+                    "identifier": "e88feddf-3276-411b-8761-d65d3ae55b62",
+                    "enabled": false
+                },
+                {
+                    "identifier": "92e8960d-c69d-416c-89c9-9a539b53abbc",
+                    "enabled": false
+                },
+                {
+                    "identifier": "d364c66a-83ea-4ef1-9b1a-038b57a51322",
+                    "enabled": false
+                },
+                {
+                    "identifier": "aac2a203-65f2-4430-b510-226598c4a974",
+                    "enabled": true
+                },
+                {
+                    "identifier": "08b747a7-2c14-4a42-857d-bf4343324330",
+                    "enabled": true
+                },
+                {
+                    "identifier": "2390217c-0de1-4c5c-872b-31f96cfd48df",
+                    "enabled": false
+                },
+                {
+                    "identifier": "7c9f7959-564f-46c2-b157-3e2a62e7a1eb",
+                    "enabled": false
+                },
+                {
+                    "identifier": "c2759986-9e87-4707-aa9e-77d6e7bdb5a2",
+                    "enabled": true
+                },
+                {
+                    "identifier": "e5f970ff-7ade-4812-bedf-562e6edd3c49",
+                    "enabled": false
+                },
+                {
+                    "identifier": "cc4ae954-4fda-4db1-adec-47af5b59954d",
+                    "enabled": false
+                },
+                {
+                    "identifier": "6a28bed4-577a-4946-85e8-6539800868c5",
+                    "enabled": false
+                },
+                {
+                    "identifier": "a8305ed3-ffe7-4ee2-a3c9-54a642c4b536",
+                    "enabled": false
+                },
+                {
+                    "identifier": "187d786c-9842-4d72-a9d2-44c34671d264",
+                    "enabled": false
+                },
+                {
+                    "identifier": "e76e4b48-775e-4046-b3e7-bb296338f50a",
+                    "enabled": false
+                },
+                {
+                    "identifier": "d532155e-876e-4cda-b08f-99c5b9c7cc32",
+                    "enabled": true
+                },
+                {
+                    "identifier": "9cc4fc6a-cc89-4141-bb10-ccb5af92c7ff",
+                    "enabled": false
+                },
+                {
+                    "identifier": "2d98436c-5f74-49fa-900f-88fadc69a6c3",
+                    "enabled": false
+                },
+                {
+                    "identifier": "25a724a1-71eb-4e43-8a66-69b3c80cb7c0",
+                    "enabled": true
+                },
+                {
+                    "identifier": "213c425a-68a8-4c9e-a191-b2ffe47b0e72",
+                    "enabled": true
+                },
+                {
+                    "identifier": "3d48df10-c494-4372-9db1-bd01da0d2857",
+                    "enabled": true
+                },
+                {
+                    "identifier": "d2454d25-8030-4d49-8697-d077d26aa77f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "19a7bdcf-febb-40cb-8afe-3c1c51a9bb8c",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "09aa8242-564a-4c11-870e-eec73bd7f81f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "d2d81d9c-5886-4472-a394-467d73b2e388",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "910a3a15-9f9e-4fa0-b7fa-423fb94d12b9",
+                    "enabled": true
+                },
+                {
+                    "identifier": "4bb6be75-6933-44ec-8036-06a9a5fd9bc8",
+                    "enabled": true
+                },
+                {
+                    "identifier": "personaDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "f9f55b5a-f927-4183-82af-dfb095b6f3ad",
+                    "enabled": true
+                },
+                {
+                    "identifier": "1c643d43-72e0-4f9b-89cf-92defc9e1d4b",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "08062b83-017b-4492-892a-3396e065264d",
+                    "enabled": true
+                },
+                {
+                    "identifier": "8b0722a3-09d5-45ae-84f0-9a7f3cdb20ca",
+                    "enabled": true
+                },
+                {
+                    "identifier": "d46ec6c1-71bc-4332-8996-61c8d1101366",
+                    "enabled": true
+                },
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                },
+                {
+                    "identifier": "b67617a9-3404-4f72-a913-0fc512a23c0c",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "aea46bcf-1867-4ad3-b95c-ba526080e7fc",
+                    "enabled": true
+                },
+                {
+                    "identifier": "c2b9a4a1-a053-47d0-9de5-fc2429b5b9e7",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "b4ccdabf-3d68-4072-babc-c8f9d7644ec4",
+                    "enabled": true
+                },
+                {
+                    "identifier": "4bed62b4-6135-4460-a8ed-89c9bbc99d0f",
+                    "enabled": true
+                },
+                {
+                    "identifier": "3edf002d-21d8-4d29-a02a-629c2726c48d",
+                    "enabled": true
+                },
+                {
+                    "identifier": "7f46a7d3-fa96-40f8-9c64-8d1b7d1b9190",
+                    "enabled": true
+                },
+                {
+                    "identifier": "36938d3b-a719-46c5-ad95-2e2e2a9c6df0",
+                    "enabled": true
+                },
+                {
+                    "identifier": "77f761f8-7966-4867-b0c9-98b5df191e69",
+                    "enabled": true
+                },
+                {
+                    "identifier": "57ae9f34-b636-4614-918b-0255317de181",
+                    "enabled": true
+                },
+                {
+                    "identifier": "74483327-1c05-4398-b225-684c1961c737",
+                    "enabled": true
+                },
+                {
+                    "identifier": "f9c33035-52e4-49af-aeda-34475bfda9e8",
+                    "enabled": true
+                },
+                {
+                    "identifier": "a1005fc3-8995-4145-8650-fb6e79512537",
+                    "enabled": true
+                }
+            ]
+        }
+    ],
+    "assistant_prefill": "",
+    "assistant_impersonation": "",
+    "use_sysprompt": true,
+    "squash_system_messages": true,
+    "media_inlining": false,
+    "inline_image_quality": "low",
+    "continue_prefill": false,
+    "continue_postfix": " ",
+    "function_calling": false,
+    "show_thoughts": true,
+    "reasoning_effort": "auto",
+    "verbosity": "auto",
+    "enable_web_search": false,
+    "seed": -1,
+    "n": 1,
+    "request_images": false,
+    "request_image_aspect_ratio": "",
+    "request_image_resolution": "2K"
+}

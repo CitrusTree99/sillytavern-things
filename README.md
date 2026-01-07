@@ -1,2 +1,2 @@
-# sillytavern-things
-Collection of Citrus' random SillyTavern bullshit.
+# Citrus' SillyTavern Stash
+Collection of Citrus' random SillyTavern stuff.
