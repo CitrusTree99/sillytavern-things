@@ -1,10 +1,13 @@
 > [!CAUTION]
-> **SCREWDRIVER WILL ONLY WORK ON SillyTavern 1.15.0 'staging' AND ONWARDS**
-> IF YOU DON'T USE THE STAGING VERSION THE MACROS ***WILL*** BREAK
-> **NESTED MACROS ARE A REQUIREMENT FOR THIS PRESET**
+> **SCREWDRIVER WILL ONLY WORK ON SillyTavern 1.15.0 'staging' AND ONWARDS**.
+> 
+> IF YOU DON'T USE THE STAGING VERSION THE MACROS ***WILL*** BREAK.
+> 
+> **NESTED MACROS ARE A REQUIREMENT FOR THIS PRESET**.
 
 > [!NOTE]
-> Version 0.1 of Screwdriver is Pre-Release and is VERY incomplete. It's still fully functional but several of the genres are not implemented and there might be errors due to lack of testing
+> Version 0.1 of Screwdriver is Pre-Release and is VERY incomplete. It's still fully functional but several of the genres are not implemented and there might be errors due to lack of testing.
+> 
 > Most testing has been done with DeepSeek V3.2, GLM 4.7, Claude Opus 4.5 and Claude Sonnet 4.5. More modules will be added.
 
 # Screwdriver
