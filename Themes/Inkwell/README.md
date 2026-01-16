@@ -9,9 +9,9 @@ If you want an even more book-like experience change the Quote Text theme color 
 
 **Changes:**
 * New Fonts: Inter, Source Serif 4, Jetbrains Mono
-* Simplification of UI Elements: Removed backgrounds from buttons, blur,  edge rounding, etc.
+* Simplification of UI Elements: Removed backgrounds from buttons, blur, edge rounding, etc.
 * Tweakable BG Blur: Play around with the Blur Strength to make your background image blurrier.
-* Extension Support: It's not 100% complete but Extension Manager, Top Bar and RPG Companion are also modified by the theme to align them better with the theme.
+* Extension Support: It's not 100% complete but Top Bar and RPG Companion are also modified by the theme to align them better with the theme.
 * General Tweaks: Messed around with padding and other things. Lots of small changes.
 
 ## IMPORTANT NOTE
@@ -22,23 +22,31 @@ Alongside the theme I will add a json file (Snippets/IconsSnippet.json) you can 
 CSS Snippets is a bit buggy, you might need to disable and re-enable the snippet when you launch SillyTavern, but it beats having 1.3k lines of redundant and entirely optional CSS on the main injection area.
 
 ## Screenshots
-![Inkwell Theme](images/Sample2.png)
+![Inkwell Theme sample screenshot 2](images/Sample2.png)
 *Landing Page*
 <hr>
 
-![Inkwell Theme](images/Sample3.png)
+![Inkwell Theme sample screenshot 3](images/Sample3.png)
 *Long Form Output*
 <hr>
 
-![Inkwell Theme](images/Sample4.png)
+![Inkwell Theme sample screenshot 4](images/Sample4.png)
 *Cluttered View*
 <hr>
 
 # Inkwell Light
-**Inkwell Light** is an experimental version of Inkwell with a *light* color scheme. Making a light theme proved more difficult than I thought so this might remain experimental. Still, you can get the current version in this repo. 
+**Inkwell Light** is an experimental version of Inkwell with a *light* color scheme. Making a light theme proved more difficult than I thought so this might remain experimental. Still, you can get the current version in this repo.
 
 **Here's a sample screenshot:**
-![Inkwell Theme](images/Sample5.png)
+![Inkwell Light Theme sample screenshot](images/Sample5.png)
 
 ## IMPORTANT NOTE
 **Inkwell Light does not support RPG Companion** directly yet, maybe soon.
+
+# Inkwell Reverie
+**Inkwell Reverie** is an extremely experimental unreleased version of Inkwell that I might release some day. Ask me about it if you read this, it's supposed to be a 19th century Romantic/Gothic book inspired theme.
+
+**Here's a little super-ultra-early-pre-alpha-pre-everything screenshot:**
+![Inkwell Reverie sample screenshot](images/ReverieDemo.png)
+
+For now it's mostly font changes and minor color tweaking but I plan to implement some prompting in my Screwdriver prompt that will extend the vibes of the theme indirectly. It's a bit of a form over function theme, for fun.
